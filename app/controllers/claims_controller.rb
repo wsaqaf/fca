@@ -225,11 +225,4 @@ class ClaimsController < ApplicationController
         @claim = Claim.where("id=? AND (claims.sharing_mode=1 OR claims.user_id="+current_user.id.to_s+")",params[:id]).first
     end
 
-    def check_if_signed_in
-      if !user_signed_in?
-        redirect_to "/"
-        return
-      end
-    end
-
 end

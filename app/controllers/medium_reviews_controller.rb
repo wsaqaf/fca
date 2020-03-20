@@ -69,12 +69,6 @@ class MediumReviewsController < ApplicationController
     @medium = Medium.find(params[:medium_id])
   end
 
-    def check_if_signed_in
-      if !user_signed_in?
-        redirect_to "/"
-      end
-    end
-
   def medium_review_params
     params.require(:medium_review).permit(:id, :medium_is_blacklisted, :note_medium_is_blacklisted, :medium_failed_factcheck_before, :note_medium_failed_factcheck_before, :medium_has_poor_security, :note_medium_has_poor_security, :medium_whois_info_discrepency, :note_medium_whois_info_discrepency, :medium_hosting_discrepency, :note_medium_hosting_discrepency, :medium_is_biased, :note_medium_is_biased, :medium_is_poorly_ranked, :note_medium_is_poorly_ranked, :medium_is_not_liable, :note_medium_is_not_liable, :medium_lacks_flagging_means, :note_medium_lacks_flagging_means, :medium_other_problems, :note_medium_other_problems, :medium_review_verdict, :medium_review_description, :note_medium_review_description, :medium_review_sharing_mode, :note_medium_review_sharing_mode)
   end

@@ -6,9 +6,4 @@ class AffiliationsController < ApplicationController
     render json: @affiliations.map(&:affiliation).uniq
   end
 
-    def check_if_signed_in
-      if !user_signed_in?
-        redirect_to "/"
-      end
-    end
 end

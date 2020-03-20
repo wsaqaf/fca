@@ -341,10 +341,4 @@ when "s22"
         return
       end
     end
-
-      def check_if_signed_in
-        if !user_signed_in?
-          redirect_to "/"
-        end
-      end
 end

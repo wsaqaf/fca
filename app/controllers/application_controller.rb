@@ -28,6 +28,12 @@ class ApplicationController < ActionController::Base
         devise_parameter_sanitizer.permit(:account_update, keys: [:name, :affiliation, :email, :password, :current_password])
     end
 
+    def check_if_signed_in
+      if !user_signed_in?
+        redirect_to new_user_session_path
+        return
+      end
+    end
 
       def filter_bar(page,filter_option)
         f={"a"=>"","m"=>"","r"=>"","u"=>"","n"=>""}
