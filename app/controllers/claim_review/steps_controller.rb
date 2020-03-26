@@ -190,12 +190,10 @@ class ClaimReview::StepsController < ApplicationController
               }]
           }
         }
-      claim_review_schema=JSON.pretty_generate(claim_review_schema)
-      @claim_review.note_review_sharing_mode=claim_review_schema
-      return claim_review_schema
-    else
+      #@claim_review.note_review_sharing_mode=JSON.pretty_generate(claim_review_schema)
+      end
+      @claim_review.note_review_sharing_mode="<under development>"
       return @claim_review.note_review_sharing_mode
-    end
   end
 
   def show
@@ -245,7 +243,7 @@ class ClaimReview::StepsController < ApplicationController
       elsif step == "s12" and @claim_review.txt_review_started!=1 then jump_to(:s20) end
 
       if step=="s19" then @claim_review_score=get_score("claim") end
-      if step=="s22" then #claim_review_schema=build_claim_review_schema();
+      if step=="s22" then claim_review_schema=build_claim_review_schema();
         redirect_to claims_path
       else render_wizard @claim_review end
 ###Step conditions###
