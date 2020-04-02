@@ -191,9 +191,8 @@ class ClaimReview::StepsController < ApplicationController
               }]
           }
         }
-      #@claim_review.note_review_sharing_mode=JSON.pretty_generate(claim_review_schema)
+      @claim_review.note_review_sharing_mode=JSON.pretty_generate(claim_review_schema)
       end
-      @claim_review.note_review_sharing_mode="<under development>"
       return @claim_review.note_review_sharing_mode
   end
 

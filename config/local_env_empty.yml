@@ -9,6 +9,7 @@ SMTP_PW: '' #in case your SMTP server requires authentication
 SERVER_NAME: '' #the name of the website/service
 SERVER_DOMAIN: '' #this is the base domain name (without https://) where the service is running (no directories)
 SERVER_CODE: '' #optional variable for debugging purposes
+ADMIN_EMAIL: '' #the email address of the website's admin where emails will come from
 RELATIVE_URL: '' #this is the directory where the app runs (if it runs on the main website, it should be left blank)
 DB_NAME: '' #the name of the postgres database used by the app
 DB_USER: '' #username to access the database
@@ -27,4 +28,3 @@ DB_PW: '' #password to access the database
 #DB_NAME: 'localfca'
 #DB_USER: 'root'
 #DB_PW: 'pw'
-
