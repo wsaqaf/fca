@@ -55,7 +55,6 @@ class AddColumnsToClaimReviews < ActiveRecord::Migration[5.1]
     add_index :claim_reviews, :title, unique: true
     add_index :claim_reviews, :claim_id, unique: true
     add_index :claim_reviews, :review_verdict
-    add_index :claim_reviews, :note_review_sharing_mode
 
   end
 end
