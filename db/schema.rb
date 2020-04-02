@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 20190601124217) do
     t.integer "user_id"
     t.integer "claim_id"
     t.integer "txt_review_started"
-    t.index ["note_review_sharing_mode"], name: "index_claim_reviews_on_note_review_sharing_mode"
     t.index ["review_verdict"], name: "index_claim_reviews_on_review_verdict"
   end
 
