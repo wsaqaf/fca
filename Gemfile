@@ -28,7 +28,8 @@ gem 'pagy'
 gem 'onebox'
 gem 'jquery-turbolinks'
 gem 'rails-i18n'
-gem "actionview", ">= 5.2.4.2"
+gem "actionview", ">= 5.2.4.3"
+gem "activesupport", ">= 5.2.4.3"
 
 gem 'spring', '>= 2.1.0'
 
