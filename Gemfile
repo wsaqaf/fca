@@ -7,7 +7,7 @@ end
 
 gem 'rails'
 gem 'pg'
-gem 'puma', '~> 3.12.2'
+gem 'puma', '~> 4.3.9'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.4.1'
